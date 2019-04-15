@@ -120,7 +120,7 @@ public class AlphaNumComparator implements Comparator<String> {
         try {
             exportFile.createNewFile(); // 新建txt文档
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
         String txtList = Arrays.asList(fileList).stream().sorted(new AlphaNumComparator()).collect(Collectors.joining("\r\n")); // 注意。\r\n不能改变，否则影响换行
         try {
@@ -130,7 +130,7 @@ public class AlphaNumComparator implements Comparator<String> {
             bw.flush();
             bw.close();
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
         }
     }
 
